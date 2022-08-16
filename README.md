@@ -31,7 +31,7 @@ addEventListener("fetch", ({ request, respondWith }) => {
 });
 ```
 
-3. Replace `TOKEN` with the value provided in the site settings page in the console of SEO4Ajax.
+3. Replace `<your site token in SEO4Ajax>` with the token provided in the site settings page in the console of SEO4Ajax.
 
 4. Click on `Save and Deploy`.
 
