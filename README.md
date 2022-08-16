@@ -21,8 +21,7 @@ addEventListener("fetch", event => {
   const { request, headers, respondWith } = event;
   const userAgent = headers.get("user-agent");
   if (userAgent && BOT_USER_AGENT.test(userAgent)) {
-    const url = new URL(request.url);
-    const { pathname, search } = url;
+    const { pathname, search } = new URL(request.url);
     if (!pathname.match(/\.[^.]+$/)) {
       respondWith(fetch("https://api.seo4ajax.com/" + TOKEN + pathname + search));
     }
