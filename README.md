@@ -1,5 +1,12 @@
 # Integration of SEO4Ajax in Cloudflare
 
+
+[SEO4Ajax](https://www.seo4ajax.com) is a service that allows AJAX websites
+(e.g. based on React, Vue.js, Svelte, Angular, Backbone, Ember, jQuery etc.) to
+be indexable by search engines and social networks.
+
+This file describes how to integrate SEO4Ajax in a [Cloudflare Worker](https://workers.cloudflare.com/).
+
 ## Instructions
 
 1. Select your website in the console of Clouflare and select `Workers > Manage workers > Create a worker`.
