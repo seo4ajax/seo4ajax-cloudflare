@@ -15,14 +15,15 @@ This file describes how to integrate SEO4Ajax in a [Cloudflare Worker](https://w
 
 ```js
 const TOKEN = "<your site token in SEO4Ajax>";
-const BOT_USER_AGENT = /google|bot|spider|pinterest|crawler|archiver|flipboardproxy|mediapartners|facebookexternalhit|insights|quora|whatsapp|slurp/i;
+const USER_AGENT_TEST = /google|bot|spider|pinterest|crawler|archiver|flipboardproxy|mediapartners|facebookexternalhit|insights|quora|whatsapp|slurp/i;
+const FILENAME_EXTENSION_TEST = /\.[^.]+$/; 
 
 addEventListener("fetch", event => {
   const { request, respondWith } = event;
   const userAgent = request.headers.get("user-agent");
-  if (userAgent && BOT_USER_AGENT.test(userAgent)) {
+  if (userAgent && USER_AGENT_TEST.test(userAgent)) {
     const { pathname, search } = new URL(request.url);
-    if (!pathname.match(/\.[^.]+$/)) {
+    if (!FILENAME_EXTENSION_TEST.test(pathname)) {
       respondWith(fetch("https://api.seo4ajax.com/" + TOKEN + pathname + search));
     }
   }
