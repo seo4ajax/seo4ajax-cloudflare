@@ -18,13 +18,13 @@ const TOKEN = "<your site token in SEO4Ajax>";
 const BOT_USER_AGENT = /google|bot|spider|pinterest|crawler|archiver|flipboardproxy|mediapartners|facebookexternalhit|insights|quora|whatsapp|slurp/i;
 
 addEventListener("fetch", event => {
-  const { request } = event;
+  const { request, respondWith } = event;
   const userAgent = request.headers.get("user-agent");
   if (userAgent && BOT_USER_AGENT.test(userAgent)) {
     const url = new URL(request.url);
     const { pathname, search } = url;
     if (!pathname.match(/\.[^.]+$/)) {
-      event.respondWith(fetch("https://api.seo4ajax.com/" + TOKEN + pathname + search));
+      respondWith(fetch("https://api.seo4ajax.com/" + TOKEN + pathname + search));
     }
   }
 });
