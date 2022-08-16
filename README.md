@@ -18,8 +18,7 @@ const TOKEN = "<your site token in SEO4Ajax>";
 const USER_AGENT_TEST = /google|bot|spider|pinterest|crawler|archiver|flipboardproxy|mediapartners|facebookexternalhit|insights|quora|whatsapp|slurp/i;
 const FILENAME_EXTENSION_TEST = /\.[^.]+$/; 
 
-addEventListener("fetch", event => {
-  const { request, respondWith } = event;
+addEventListener("fetch", ({ request, respondWith }) => {
   const userAgent = request.headers.get("user-agent");
   if (userAgent && USER_AGENT_TEST.test(userAgent)) {
     const { pathname, search } = new URL(request.url);
