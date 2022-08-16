@@ -37,4 +37,4 @@ addEventListener("fetch", event => {
 
 6. Set the `route` value to `example.com/*` where `example.com` is the domain name of your website.
 
-6. Click on `Save`.
+7. Click on `Save`.
