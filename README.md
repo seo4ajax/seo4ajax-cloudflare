@@ -18,8 +18,8 @@ const TOKEN = "<your site token in SEO4Ajax>";
 const BOT_USER_AGENT = /google|bot|spider|pinterest|crawler|archiver|flipboardproxy|mediapartners|facebookexternalhit|insights|quora|whatsapp|slurp/i;
 
 addEventListener("fetch", event => {
-  const { request, headers, respondWith } = event;
-  const userAgent = headers.get("user-agent");
+  const { request, respondWith } = event;
+  const userAgent = request.headers.get("user-agent");
   if (userAgent && BOT_USER_AGENT.test(userAgent)) {
     const { pathname, search } = new URL(request.url);
     if (!pathname.match(/\.[^.]+$/)) {
