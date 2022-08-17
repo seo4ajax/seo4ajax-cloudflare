@@ -18,7 +18,7 @@ const TOKEN = "<your site token in SEO4Ajax>";
 const USER_AGENT_TEST = /google|bot|spider|pinterest|crawler|archiver|flipboardproxy|mediapartners|facebookexternalhit|insights|quora|whatsapp|slurp/i;
 const FILENAME_EXTENSION_TEST = /\.[^.]+$/; 
 const USER_AGENT_HEADER = "user-agent";
-const API_URL = "https://api.seo4ajax.com/";
+const API_URL = "https://api.seo4ajax.com/" + TOKEN;
 
 addEventListener("fetch", ({ request, respondWith }) => {
   const { headers, url } = request;
@@ -26,7 +26,7 @@ addEventListener("fetch", ({ request, respondWith }) => {
   if (userAgent && USER_AGENT_TEST.test(userAgent)) {
     const { pathname, search } = new URL(url);
     if (!FILENAME_EXTENSION_TEST.test(pathname)) {
-      respondWith(fetch(API_URL + TOKEN + pathname + search));
+      respondWith(fetch(API_URL + pathname + search));
     }
   }
 });
