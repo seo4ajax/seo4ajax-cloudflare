@@ -3,7 +3,7 @@
 
 [SEO4Ajax](https://www.seo4ajax.com) is a service that allows AJAX websites
 (e.g. based on React, Vue.js, Svelte, Angular, Backbone, Ember, jQuery etc.) to
-be indexable by search engines and social networks.
+be indexable by search engines, social and ad networks.
 
 This file describes how to integrate SEO4Ajax in a [Cloudflare Worker](https://workers.cloudflare.com/).
 
