@@ -21,9 +21,10 @@ const USER_AGENT_HEADER = "user-agent";
 const API_URL = "https://api.seo4ajax.com/";
 
 addEventListener("fetch", ({ request, respondWith }) => {
-  const userAgent = request.headers.get(USER_AGENT_HEADER);
+  const { headers, url } = request;
+  const userAgent = headers.get(USER_AGENT_HEADER);
   if (userAgent && USER_AGENT_TEST.test(userAgent)) {
-    const { pathname, search } = new URL(request.url);
+    const { pathname, search } = new URL(url);
     if (!FILENAME_EXTENSION_TEST.test(pathname)) {
       respondWith(fetch(API_URL + TOKEN + pathname + search));
     }
