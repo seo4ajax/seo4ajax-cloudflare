@@ -16,7 +16,7 @@ This file describes how to integrate SEO4Ajax in a [Cloudflare Worker](https://w
 ```js
 const SITE_TOKEN = "SEO4AJAX_SITE_TOKEN";
 const USER_AGENT_TEST = /google|bot|spider|pinterest|crawler|archiver|flipboardproxy|mediapartners|facebookexternalhit|insights|quora|whatsapp|slurp/i;
-const FILENAME_EXTENSION_TEST = /\.[^.]+$/; 
+const FILENAME_EXTENSION_TEST = /\.(?!htm)[^.]+$/; 
 const USER_AGENT_HEADER = "user-agent";
 const API_URL = "https://api.seo4ajax.com/" + SITE_TOKEN;
 
