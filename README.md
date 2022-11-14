@@ -20,7 +20,7 @@ const FILENAME_EXTENSION_TEST = /\.(?!htm)[^.]+$/;
 const USER_AGENT_HEADER = "user-agent";
 const API_URL = "https://api.seo4ajax.com/" + SITE_TOKEN;
 
-addEventListener("fetch", (event) => {
+addEventListener("fetch", event => {
   const { url, headers } = event.request;
   const userAgent = headers.get(USER_AGENT_HEADER);
   if (userAgent && USER_AGENT_TEST.test(userAgent)) {
