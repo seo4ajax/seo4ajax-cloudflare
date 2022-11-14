@@ -20,13 +20,13 @@ const FILENAME_EXTENSION_TEST = /\.[^.]+$/;
 const USER_AGENT_HEADER = "user-agent";
 const API_URL = "https://api.seo4ajax.com/" + SITE_TOKEN;
 
-addEventListener("fetch", ({ request, respondWith }) => {
-  const { headers, url } = request;
+addEventListener("fetch", (event) => {
+  const { url, headers } = event.request;
   const userAgent = headers.get(USER_AGENT_HEADER);
   if (userAgent && USER_AGENT_TEST.test(userAgent)) {
     const { pathname, search } = new URL(url);
     if (!FILENAME_EXTENSION_TEST.test(pathname)) {
-      respondWith(fetch(API_URL + pathname + search));
+      event.respondWith(fetch(API_URL + pathname + search));
     }
   }
 });
