@@ -36,7 +36,7 @@ addEventListener("fetch", ({ request, respondWith }) => {
 
 4. Click on `Save and Deploy`.
 
-5. Go to the `Workers` page in the console of Cloudflare and click on `Add route`.
+5. Go to the `Workers` page in the console of Cloudflare and click on `Triggers > Add route`.
 
 6. Set the `route` value to `example.com/*` where `example.com` is the domain name of your website.
 
