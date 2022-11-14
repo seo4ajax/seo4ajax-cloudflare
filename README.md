@@ -9,7 +9,7 @@ This file describes how to integrate SEO4Ajax in a [Cloudflare Worker](https://w
 
 ## Instructions
 
-1. Select your website in the console of Clouflare and select `Workers > Manage workers > Create a worker`.
+1. Go to the homepage of the Cloudflare console and select `Workers > Manage workers > Create a worker`.
 
 2. Copy the code below and paste it in the code editor.
 
