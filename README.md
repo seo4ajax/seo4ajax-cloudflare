@@ -46,12 +46,12 @@ addEventListener("fetch", event => {
 
 If you see 403 errors in SEO4Ajax, this means you need to whitelist the user-agent of SEO4Ajax by going to https://radar.cloudflare.com/traffic/verified-bots and enter the following info:
 
-Bot Name: `SEO4Ajax Bot`
-Bot Owner: `Capsule Code` (uncheck `I own this bot`)
-Bot Documentation URL: `https://www.seo4ajax.com/webscraper/`
-Short Description: `SEO4Ajax is a service that makes dynamic content indexable by bots.`
-User-Agents header values sent by the bot: `Mozilla/5.0 AppleWebKit (compatible; s4a/1.0; +https://www.seo4ajax.com/webscraper)`
-User-Agents Match Pattern: `seo4ajax`
-Bot Crawler Category: `Search Engine Crawler`
-Verification Method: `ASN`
-Validation Instructions: `14618`
+- Bot Name: `SEO4Ajax Bot`
+- Bot Owner: `Capsule Code` (uncheck `I own this bot`)
+- Bot Documentation URL: `https://www.seo4ajax.com/webscraper/`
+- Short Description: `SEO4Ajax is a service that makes dynamic content indexable by bots.`
+- User-Agents header values sent by the bot: `Mozilla/5.0 AppleWebKit (compatible; s4a/1.0; +https://www.seo4ajax.com/webscraper)`
+- User-Agents Match Pattern: `seo4ajax`
+- Bot Crawler Category: `Search Engine Crawler`
+- Verification Method: `ASN`
+- Validation Instructions: `14618`
